@@ -1,6 +1,6 @@
 const seed = require('../Seed/seed')
 const Destination = require('../Model/Destination')
-
+const { setError } = require('../config/error')
 const cleanDestinationCollections = async () => {
   await Destination.collection.drop()
   console.log('>>> Colecciones limpias!')

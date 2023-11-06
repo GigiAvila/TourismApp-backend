@@ -1,27 +1,12 @@
 require('dotenv').config()
 const express = require('express')
+const app = express()
 require('./Config/db')
 const cors = require('cors')
 const { rateLimit } = require('express-rate-limit')
-const {
-  cleanDestinationCollections,
-  saveDestinationDocuments
-} = require('./Controller/destination')
-const { cleanUserCollections, saveUserDocuments } = require('./Controller/user')
-
-const app = express()
-
-cleanDestinationCollections()
-saveDestinationDocuments()
-cleanUserCollections()
-saveUserDocuments()
-  .then(() => {
-    console.log('Script terminado')
-  })
-  .catch((err) => {
-    console.log('Error lanzando el script!', err)
-    process.exit(1)
-  })
+const { setError } = require('./config/error')
+const seedFunctions = require('./Config/seed')
+seedFunctions()
 
 // CORS
 app.use(
@@ -49,15 +34,15 @@ app.use(express.urlencoded({ limit: '1mb', extended: true }))
 const mainRouter = require('./Routes/indexRouter')
 app.use('/api', mainRouter)
 
-// Controlador de rutas no encontradas
+// Controlador de errores
 app.use('*', (req, res, next) => {
-  res.status(404).json({ data: 'Not found' })
+  return next(setError(404, 'Not Found'))
 })
 
-// //Controlador de errores generales del servidor
-app.use((err, req, res, next) => {
-  console.log(' >>>> Server error:', err)
-  res.status(500).json({ data: 'Interval Server Error' })
+app.use((error, req, res, next) => {
+  return res
+    .status(error.status || 500)
+    .json(error.message || 'Internal Server Error')
 })
 
 const PORT = 4001

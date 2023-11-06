@@ -1,10 +1,15 @@
 const express = require('express')
-const indexRouter = require('express').Router()
-const destinationRouter = require('./destination')
+const indexRouter = express.Router()
+// const destinationRouter = require('./destination')
+const cityRouter = require('./city')
+const hotelRouter = require('./hotel')
+const excursionRouter = require('./excursion')
 const userRouter = require('./user')
-const router = express.Router()
 
-router.use('/destination', destinationRouter)
-router.use('/user', userRouter)
+// indexRouter.use('/destination', destinationRouter)
+indexRouter.use('/cities', cityRouter)
+indexRouter.use('/hotels', hotelRouter)
+indexRouter.use('/excursions', excursionRouter)
+indexRouter.use('/users', userRouter)
 
 module.exports = indexRouter

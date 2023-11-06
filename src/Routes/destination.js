@@ -1,19 +1,18 @@
-const express = require('express')
-const destinationsRouter = require('express').Router()
-const router = express.Router()
+// const express = require('express')
+// const destinationRouter = require('express').Router()
 
-const {
-  getAllDestinations,
-  getDestinationById,
-  createDestination,
-  updateDestination,
-  deleteDestination
-} = require('../Controller/destination')
+// const {
+//   getAllDestinations,
+//   getDestinationById,
+//   createDestination,
+//   updateDestination,
+//   deleteDestination
+// } = require('../Controller/destination')
 
-router.get('/', getAllDestinations)
-router.get('/:id', getDestinationById)
-router.post('/', createDestination)
-router.put('/:id', updateDestination)
-router.delete('/:id', deleteDestination)
+// destinationRouter.get('/', getAllDestinations)
+// destinationRouter.get('/:id', getDestinationById)
+// destinationRouter.post('/', createDestination)
+// destinationRouter.put('/:id', updateDestination)
+// destinationRouter.delete('/:id', deleteDestination)
 
-module.exports = destinationsRouter
+// module.exports = destinationRouter
