@@ -40,7 +40,7 @@ const createCity = async (req, res, next) => {
   }
 }
 
-const deleteCity = async (req, res) => {
+const deleteCity = async (req, res, next) => {
   try {
     const { id } = req.params
     await deleteCityFromDB(id)

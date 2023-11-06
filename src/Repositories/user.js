@@ -109,6 +109,30 @@ const getAllUsersFromDB = async (filter) => {
 
 const getUserByIdFromDB = async (id) => {
   const user = await User.findById(id)
+    .populate({
+      path: 'selection.city',
+      model: 'City',
+      select: {
+        _id: true,
+        name: true
+      }
+    })
+    .populate({
+      path: 'selection.hotel',
+      model: 'Hotel',
+      select: {
+        _id: true,
+        name: true
+      }
+    })
+    .populate({
+      path: 'selection.excursion',
+      model: 'Excursion',
+      select: {
+        _id: true,
+        name: true
+      }
+    })
   return user
 }
 
@@ -123,7 +147,29 @@ const deleteUserFromDB = async (id) => {
 }
 
 const updateUserByIdInDB = async (id, payload) => {
-  const user = await User.findByIdAndUpdate(id, payload, {
+  const oldUser = await User.findById(id)
+  const newUser = new User(payload)
+
+  newUser._id = id
+
+  if (newUser.selection.excursion) {
+    const oldExcursions = oldUser.selection.excursion.map((excursion) =>
+      excursion.toString()
+    )
+    const newExcursions = newUser.selection.excursion.map((excursion) =>
+      excursion.toString()
+    )
+    newUser.selection.excursion = [...oldExcursions, ...newExcursions]
+
+    const uniqueExcursions = newUser.selection.excursion.filter(
+      (excursion, index, excursions) => excursions.indexOf(excursion) === index
+    )
+
+    console.log(uniqueExcursions)
+    newUser.selection.excursion = uniqueExcursions
+  }
+
+  const user = await User.findByIdAndUpdate(id, newUser, {
     new: true
   })
   return user

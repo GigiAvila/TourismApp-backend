@@ -7,25 +7,6 @@ const userSchema = new mongoose.Schema(
     surname: { type: String, required: false, trim: true },
     country: { type: String, required: false, trim: true },
     email: { type: String, required: false, trim: true }
-    // selection: {
-    //   city: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'City',
-    //     required: false
-    //   },
-    //   hotel: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'Hotel',
-    //     required: false
-    //   },
-    //   excursion: [
-    //     {
-    //       type: mongoose.Schema.Types.ObjectId,
-    //       ref: 'Excursion',
-    //       required: false
-    //     }
-    //   ]
-    // }
   },
   {
     timestamps: true,

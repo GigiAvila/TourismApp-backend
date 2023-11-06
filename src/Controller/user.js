@@ -70,9 +70,11 @@ const updateUser = async (req, res, next) => {
       surname,
       country,
       email,
-      selectedCity: selection.cityId,
-      selectedHotel: selection.hotelId,
-      selectedExcursions: selection.excursionId
+      selection: {
+        city: selection.city,
+        hotel: selection.hotel,
+        excursion: selection.excursion
+      }
     }
 
     const user = await updateUserByIdInDB(id, userUpdateData)
