@@ -4,9 +4,6 @@ const { Schema } = mongoose
 const destintationSchema = new mongoose.Schema(
   {
     country: { type: String, required: true, trim: true }
-    // cities: [
-    //   { type: mongoose.Schema.Types.ObjectId, ref: 'City', required: false }
-    // ]
   },
   {
     timestamps: true,

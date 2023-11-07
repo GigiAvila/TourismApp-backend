@@ -36,9 +36,11 @@ const createUser = async (req, res, next) => {
       surname,
       country,
       email,
-      selectedCity: selection.cityId,
-      selectedHotel: selection.hotelId,
-      selectedExcursions: selection.excursionId
+      selection: {
+        city: selection.city,
+        hotel: selection.hotel,
+        excursion: selection.excursion
+      }
     })
 
     res.status(201).json({ data: newUser })

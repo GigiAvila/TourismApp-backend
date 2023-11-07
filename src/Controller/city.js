@@ -32,7 +32,9 @@ const createCity = async (req, res, next) => {
   try {
     const newCity = await createCityInDB({
       name: req.body.name,
-      users: req.body.users
+      users: req.body.users,
+      hotels: req.body.hotels,
+      excursions: req.body.excursions
     })
     res.status(201).json({ data: newCity })
   } catch (error) {

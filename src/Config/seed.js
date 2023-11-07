@@ -1,8 +1,8 @@
 const {
   cleanDestinationCollections,
   saveDestinationDocuments,
-  updateDestinationsInDB
-  // cleanDestinationPrivateFields
+  updateCitiesInDestinationInDB,
+  cleanDestinationPrivateFields
 } = require('../Repositories/destination')
 
 const {
@@ -46,13 +46,14 @@ const seedFunctions = async () => {
   const { cities } = await saveCityDocuments()
   const { hotels } = await saveHotelDocuments()
   const { excursions } = await saveExcursionDocuments()
+  updateCitiesInDestinationInDB(cities, destinations)
   updateUserSelectionsInDB(users, cities, hotels, excursions)
   updateHotelInCityInDB(cities, hotels)
   updateExcursionInCityInDB(cities, excursions)
   updateUsersInCityInDB(users, cities)
   updateUsersInHotelsInDB(users, hotels)
   updateUsersInExcursionsInDB(users, excursions)
-  // cleanDestinationPrivateFields()
+  cleanDestinationPrivateFields()
   cleanUserPrivateFields()
   cleanCityPrivateFields()
   cleanHotelPrivateFields()

@@ -2,6 +2,7 @@ const seed = {
   destinations: [
     {
       country: 'Spain',
+
       cities: [
         {
           _cityId: 1,
@@ -90,6 +91,7 @@ const seed = {
     },
     {
       country: 'France',
+
       cities: [
         {
           _cityId: 3,
@@ -162,6 +164,7 @@ const seed = {
     },
     {
       country: 'Germany',
+
       cities: [
         {
           _cityId: 5,
@@ -225,6 +228,7 @@ const seed = {
     },
     {
       country: 'Portugal',
+
       cities: [
         {
           _cityId: 7,
@@ -284,6 +288,7 @@ const seed = {
     },
     {
       country: 'Brazil',
+
       cities: [
         {
           _cityId: 9,
