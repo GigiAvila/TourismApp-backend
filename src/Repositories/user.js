@@ -1,5 +1,6 @@
 const User = require('../Model/user')
 const seed = require('../Seed/seed')
+const bcrypt = require('bcrypt')
 
 const cleanUserCollections = async () => {
   await User.collection.drop()
@@ -7,8 +8,16 @@ const cleanUserCollections = async () => {
 }
 
 const saveUserDocuments = async () => {
-  const users = await User.insertMany(seed.users)
-  console.log('>>>>  Documentos Users guardados con éxito')
+  const usersWithHashedPass = seed.users.map((user) => {
+    return {
+      ...user,
+      password: bcrypt.hashSync(user.password, 10)
+    }
+  })
+
+  const users = await User.insertMany(usersWithHashedPass)
+
+  console.log('>>>> Documentos Users guardados con éxito')
 
   return {
     users
@@ -28,7 +37,6 @@ const updateUserSelectionsInDB = async (users, cities, hotels, excursions) => {
 
       const selectedExcursionIds = user.selection._excursionId
 
-      // Filtra las excursiones para evitar errores cuando no se encuentra una
       const selectedExcursions = excursions.filter((excursion) =>
         selectedExcursionIds.includes(excursion._excursionId)
       )
@@ -74,11 +82,8 @@ const cleanUserPrivateFields = async () => {
   console.log('>>>>> Campos auxiliares de User eliminados')
 }
 
-const getAllUsersFromDB = async (filter) => {
-  const nameFilterOptions = {
-    name: { $regex: new RegExp(filter, 'i') }
-  }
-  const users = await User.find(filter ? nameFilterOptions : {})
+const getAllUsersFromDB = async () => {
+  const users = await User.find()
     .populate({
       path: 'selection.city',
       model: 'City',
@@ -136,12 +141,6 @@ const getUserByIdFromDB = async (id) => {
   return user
 }
 
-const createUserInDB = async (payload) => {
-  const newUser = new User(payload)
-  await newUser.save()
-  return newUser
-}
-
 const deleteUserFromDB = async (id) => {
   await User.deleteOne({ _id: id })
 }
@@ -175,6 +174,19 @@ const updateUserByIdInDB = async (id, payload) => {
   return user
 }
 
+const registerUserInDB = async (payload) => {
+  const userDuplicate = await User.findOne({ userName: payload.userName })
+
+  if (!userDuplicate) {
+    const newUser = new User(payload)
+    await newUser.save()
+    return newUser
+  } else {
+    console.log('>>>>> ⛑️this user already exists in DB')
+    return null
+  }
+}
+
 module.exports = {
   cleanUserCollections,
   saveUserDocuments,
@@ -182,7 +194,7 @@ module.exports = {
   cleanUserPrivateFields,
   getAllUsersFromDB,
   getUserByIdFromDB,
-  createUserInDB,
   deleteUserFromDB,
-  updateUserByIdInDB
+  updateUserByIdInDB,
+  registerUserInDB
 }

@@ -1,7 +1,9 @@
+const User = require('../Model/user')
+const bcrypt = require('bcrypt')
 const {
   getAllUsersFromDB,
   getUserByIdFromDB,
-  createUserInDB,
+  registerUserInDB,
   deleteUserFromDB,
   updateUserByIdInDB
 } = require('../Repositories/user')
@@ -9,8 +11,7 @@ const { setError } = require('../config/error')
 
 const getAllUsers = async (req, res, next) => {
   try {
-    const { filter } = req.query
-    const users = await getAllUsersFromDB(filter)
+    const users = await getAllUsersFromDB()
     res.status(200).json({ data: users })
   } catch (error) {
     return next(setError(400, "Can't find users"))
@@ -24,28 +25,6 @@ const getUserById = async (req, res, next) => {
     res.status(200).json({ data: user })
   } catch (error) {
     return next(setError(400, "Can't find user"))
-  }
-}
-
-const createUser = async (req, res, next) => {
-  try {
-    const { name, surname, country, email, selection } = req.body
-
-    const newUser = await createUserInDB({
-      name,
-      surname,
-      country,
-      email,
-      selection: {
-        city: selection.city,
-        hotel: selection.hotel,
-        excursion: selection.excursion
-      }
-    })
-
-    res.status(201).json({ data: newUser })
-  } catch (error) {
-    next(setError(400, "Can't create user"))
   }
 }
 
@@ -87,10 +66,54 @@ const updateUser = async (req, res, next) => {
   }
 }
 
+const registerUser = async (req, res, next) => {
+  try {
+    const { name, surname, country, email, selection, userName, password } =
+      req.body
+
+    const hashedPassword = bcrypt.hashSync(password, 10)
+
+    const newUser = await registerUserInDB({
+      name,
+      surname,
+      country,
+      email,
+      userName,
+      password: hashedPassword,
+      selection: {
+        city: selection.city,
+        hotel: selection.hotel,
+        excursion: selection.excursion
+      }
+    })
+
+    if (newUser) {
+      res.status(201).json({ data: newUser })
+    } else {
+      if (password && !passwordRegex.test(password)) {
+        res.status(400).json({ error: 'Invalid password format' })
+      } else {
+        res.status(400).json({ error: 'User already exists' })
+      }
+    }
+  } catch (error) {
+    console.log(error)
+    next(setError(400, "Can't register new user"))
+  }
+}
+
+const loginUser = async (req, res, next) => {
+  try {
+  } catch (error) {
+    return next(setError(400, "Can't login "))
+  }
+}
+
 module.exports = {
   getAllUsers,
   getUserById,
-  createUser,
   deleteUser,
-  updateUser
+  updateUser,
+  registerUser,
+  loginUser
 }

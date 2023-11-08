@@ -19,8 +19,8 @@ app.use(
 
 // LIMITER
 const limiter = rateLimit({
-  windowMs: 5 * 60 * 1000,
-  limit: 100,
+  windowMs: 3 * 60 * 1000,
+  limit: 50,
   standardHeaders: false,
   legacyHeaders: false
 })

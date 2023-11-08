@@ -357,10 +357,26 @@ const seed = {
   ],
   users: [
     {
+      name: 'Master ',
+      surname: 'User',
+      country: 'USA',
+      email: 'masterUser@example.com',
+      userName: 'MasterUser',
+      password: '123abc!',
+      _userId: 0,
+      selection: {
+        _cityId: 0,
+        _hotelId: 0,
+        _excursionId: []
+      }
+    },
+    {
       name: 'John',
       surname: 'Doe',
       country: 'USA',
       email: 'john.doe@example.com',
+      userName: 'JohnDoe',
+      password: '456def?',
       _userId: 1,
       selection: {
         _cityId: 1,
@@ -373,6 +389,8 @@ const seed = {
       surname: 'Smith',
       country: 'Canada',
       email: 'alice.smith@example.com',
+      userName: 'AliceSmith',
+      password: '456def?',
       _userId: 2,
       selection: {
         _cityId: 2,
@@ -385,6 +403,8 @@ const seed = {
       surname: 'Garcia',
       country: 'Spain',
       email: 'maria.garcia@example.com',
+      userName: 'MariaGarcia',
+      password: '456def?',
       _userId: 3,
       selection: {
         _cityId: 3,
@@ -397,6 +417,8 @@ const seed = {
       surname: 'Andersen',
       country: 'Denmark',
       email: 'elsa.andersen@example.com',
+      userName: 'ElsaAndersen',
+      password: '456def?',
       _userId: 4,
       selection: {
         _cityId: 4,
@@ -409,6 +431,8 @@ const seed = {
       surname: 'Rossi',
       country: 'Italy',
       email: 'luca.rossi@example.com',
+      userName: 'LucaRossi',
+      password: '456def?',
       _userId: 5,
       selection: {
         _cityId: 5,
@@ -421,6 +445,8 @@ const seed = {
       surname: 'Johnson',
       country: 'USA',
       email: 'michael.johnson@example.com',
+      userName: 'MichaelJohnson',
+      password: '456def?',
       _userId: 6,
       selection: {
         _cityId: 6,
@@ -433,6 +459,8 @@ const seed = {
       surname: 'Brown',
       country: 'Canada',
       email: 'sophie.brown@example.com',
+      userName: 'SophieBrown',
+      password: '456def?',
       _userId: 7,
       selection: {
         _cityId: 7,
@@ -445,6 +473,8 @@ const seed = {
       surname: 'Gomez',
       country: 'Spain',
       email: 'carlos.gomez@example.com',
+      userName: 'CarlosGomez',
+      password: '456def?',
       _userId: 8,
       selection: {
         _cityId: 8,
@@ -457,6 +487,8 @@ const seed = {
       surname: 'Gonzalez',
       country: 'Chile',
       email: 'lars.gonzalez@example.com',
+      userName: 'LaraGonzalez',
+      password: '456def?',
       _userId: 9,
       selection: {
         _cityId: 9,
@@ -469,6 +501,8 @@ const seed = {
       surname: 'Rossi',
       country: 'Italy',
       email: 'isabella.rossi@example.com',
+      userName: 'IsabellaRossi',
+      password: '456def?',
       _userId: 10,
       selection: {
         _cityId: 10,
@@ -481,6 +515,8 @@ const seed = {
       surname: 'Petersen',
       country: 'Denmark',
       email: 'emil.petersen@example.com',
+      userName: 'EmilPetersen',
+      password: '456def?',
       _userId: 11,
       selection: {
         _cityId: 6,
@@ -493,6 +529,8 @@ const seed = {
       surname: 'Yamamoto',
       country: 'Japan',
       email: 'takashi.yamamoto@example.com',
+      userName: 'TakashiYamamoto',
+      password: '456def?',
       _userId: 12,
       selection: {
         _cityId: 8,
@@ -505,6 +543,8 @@ const seed = {
       surname: 'Miller',
       country: 'USA',
       email: 'olivia.miller@example.com',
+      userName: 'OliviaMiller',
+      password: '456def?',
       _userId: 13,
       selection: {
         _cityId: 10,
@@ -517,6 +557,8 @@ const seed = {
       surname: 'Ferrari',
       country: 'Italy',
       email: 'matteo.ferrari@example.com',
+      userName: 'MatteoFerrari',
+      password: '456def?',
       _userId: 14,
       selection: {
         _cityId: 2,
@@ -529,6 +571,8 @@ const seed = {
       surname: 'Ty',
       country: 'Corea',
       email: 'eva.andersson@example.com',
+      userName: 'EvaTy',
+      password: '456def?',
       _userId: 15,
       selection: {
         _cityId: 3,
@@ -541,6 +585,8 @@ const seed = {
       surname: 'Wilson',
       country: 'Australia',
       email: 'hannah.wilson@example.com',
+      userName: 'HannahWilson',
+      password: '456def?',
       _userId: 16,
       selection: {
         _cityId: 1,
@@ -553,6 +599,8 @@ const seed = {
       surname: 'Kumar',
       country: 'India',
       email: 'rajesh.kumar@example.com',
+      userName: 'RajeshKumar',
+      password: '456def?',
       _userId: 17,
       selection: {
         _cityId: 5,
@@ -565,6 +613,8 @@ const seed = {
       surname: 'Chen',
       country: 'China',
       email: 'liwei.chen@example.com',
+      userName: 'LiWeiChen',
+      password: '456def?',
       _userId: 18,
       selection: {
         _cityId: 9,
