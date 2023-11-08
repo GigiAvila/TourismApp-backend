@@ -357,7 +357,7 @@ const seed = {
   ],
   users: [
     {
-      name: 'Master ',
+      name: 'Master',
       surname: 'User',
       country: 'USA',
       email: 'masterUser@example.com',

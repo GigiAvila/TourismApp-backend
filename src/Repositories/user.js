@@ -1,6 +1,7 @@
 const User = require('../Model/user')
 const seed = require('../Seed/seed')
 const bcrypt = require('bcrypt')
+const { generateSign } = require('../Config/jwt')
 
 const cleanUserCollections = async () => {
   await User.collection.drop()
@@ -187,6 +188,23 @@ const registerUserInDB = async (payload) => {
   }
 }
 
+const loginUserInDB = async (payload) => {
+  const user = await User.findOne({ userName: payload.userName })
+
+  if (!user) {
+    console.log('>>>>> ⛑️this user does not exist in DB')
+    return false
+  }
+  if (bcrypt.compareSync(payload.password, user.password)) {
+    const token = generateSign(user._id)
+    console.log('>>>> ⛑️ User is now signed in', token)
+    return true
+  } else {
+    console.log('>>>> ⛑️ Passwords do not match')
+    return false
+  }
+}
+
 module.exports = {
   cleanUserCollections,
   saveUserDocuments,
@@ -196,5 +214,6 @@ module.exports = {
   getUserByIdFromDB,
   deleteUserFromDB,
   updateUserByIdInDB,
-  registerUserInDB
+  registerUserInDB,
+  loginUserInDB
 }

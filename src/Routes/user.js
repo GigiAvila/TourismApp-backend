@@ -11,8 +11,8 @@ const {
 
 userRouter.get('/', getAllUsers)
 userRouter.get('/:id', getUserById)
-userRouter.post('/', registerUser)
-// userRouter.post('/', loginUser)
+userRouter.post('/register', registerUser)
+userRouter.post('/login', loginUser)
 userRouter.put('/:id', updateUser)
 userRouter.delete('/:id', deleteUser)
 

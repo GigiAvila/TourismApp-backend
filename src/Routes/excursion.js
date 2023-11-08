@@ -7,11 +7,12 @@ const {
   deleteExcursion,
   updateExcursion
 } = require('../Controller/excursion')
+const { isAuth } = require('../Middleware/auth')
 
 excursionRouter.get('/', getAllExcursions)
 excursionRouter.get('/:id', getExcursionById)
-excursionRouter.post('/', createExcursion)
-excursionRouter.put('/:id', updateExcursion)
-excursionRouter.delete('/:id', deleteExcursion)
+excursionRouter.post('/', [isAuth], createExcursion)
+excursionRouter.put('/:id', [isAuth], updateExcursion)
+excursionRouter.delete('/:id', [isAuth], deleteExcursion)
 
 module.exports = excursionRouter

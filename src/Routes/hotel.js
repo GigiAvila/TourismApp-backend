@@ -7,11 +7,12 @@ const {
   deleteHotel,
   updateHotel
 } = require('../Controller/hotel')
+const { isAuth } = require('../Middleware/auth')
 
 hotelRouter.get('/', getAllHotels)
 hotelRouter.get('/:id', getHotelById)
-hotelRouter.post('/', createHotel)
-hotelRouter.put('/:id', updateHotel)
-hotelRouter.delete('/:id', deleteHotel)
+hotelRouter.post('/', [isAuth], createHotel)
+hotelRouter.put('/:id', [isAuth], updateHotel)
+hotelRouter.delete('/:id', [isAuth], deleteHotel)
 
 module.exports = hotelRouter

@@ -7,11 +7,12 @@ const {
   deleteCity,
   updateCity
 } = require('../Controller/city')
+const { isAuth } = require('../Middleware/auth')
 
 cityRouter.get('/', getAllCities)
 cityRouter.get('/:id', getCityById)
-cityRouter.post('/', createCity)
-cityRouter.put('/:id', updateCity)
-cityRouter.delete('/:id', deleteCity)
+cityRouter.post('/', [isAuth], createCity)
+cityRouter.put('/:id', [isAuth], updateCity)
+cityRouter.delete('/:id', [isAuth], deleteCity)
 
 module.exports = cityRouter
