@@ -357,6 +357,7 @@ const seed = {
   ],
   users: [
     {
+      type: 'admin',
       name: 'Master',
       surname: 'User',
       country: 'USA',
@@ -371,6 +372,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'John',
       surname: 'Doe',
       country: 'USA',
@@ -385,6 +387,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Alice',
       surname: 'Smith',
       country: 'Canada',
@@ -399,6 +402,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Maria',
       surname: 'Garcia',
       country: 'Spain',
@@ -413,6 +417,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Elsa',
       surname: 'Andersen',
       country: 'Denmark',
@@ -427,6 +432,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Luca',
       surname: 'Rossi',
       country: 'Italy',
@@ -441,6 +447,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Michael',
       surname: 'Johnson',
       country: 'USA',
@@ -455,6 +462,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Sophie',
       surname: 'Brown',
       country: 'Canada',
@@ -469,6 +477,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Carlos',
       surname: 'Gomez',
       country: 'Spain',
@@ -483,6 +492,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Lara',
       surname: 'Gonzalez',
       country: 'Chile',
@@ -497,6 +507,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Isabella',
       surname: 'Rossi',
       country: 'Italy',
@@ -511,6 +522,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Emil',
       surname: 'Petersen',
       country: 'Denmark',
@@ -525,6 +537,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Takashi',
       surname: 'Yamamoto',
       country: 'Japan',
@@ -539,6 +552,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Olivia',
       surname: 'Miller',
       country: 'USA',
@@ -553,6 +567,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Matteo',
       surname: 'Ferrari',
       country: 'Italy',
@@ -567,6 +582,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Eva',
       surname: 'Ty',
       country: 'Corea',
@@ -581,6 +597,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Hannah',
       surname: 'Wilson',
       country: 'Australia',
@@ -595,6 +612,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Rajesh',
       surname: 'Kumar',
       country: 'India',
@@ -609,6 +627,7 @@ const seed = {
       }
     },
     {
+      type: 'user',
       name: 'Li Wei',
       surname: 'Chen',
       country: 'China',

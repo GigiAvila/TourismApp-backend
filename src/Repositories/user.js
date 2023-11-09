@@ -193,15 +193,16 @@ const loginUserInDB = async (payload) => {
 
   if (!user) {
     console.log('>>>>> ⛑️this user does not exist in DB')
-    return false
+    return { success: false, message: 'User does not exist' }
   }
+
   if (bcrypt.compareSync(payload.password, user.password)) {
-    const token = generateSign(user._id)
-    console.log('>>>> ⛑️ User is now signed in', token)
-    return true
+    generateSign(user._id)
+    console.log('>>>> ⛑️ User is now signed in')
+    return { success: true, message: 'User is now logged in' }
   } else {
     console.log('>>>> ⛑️ Passwords do not match')
-    return false
+    return { success: false, message: 'Passwords do not match' }
   }
 }
 

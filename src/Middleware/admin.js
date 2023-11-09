@@ -2,25 +2,28 @@ const { verifyJwt } = require('../Config/jwt')
 const { setError } = require('../config/error')
 const User = require('../Model/user')
 
-const isAuth = async (req, res, next) => {
+const isAdmin = async (req, res, next) => {
   try {
     const token = req.headers.authorization
 
     if (!token) {
-      return next(setError(400, 'You are not authorized to access here'))
+      return next(setError(400, 'You have to introduce your token'))
     }
 
     const parsedToken = token.replace('Bearer ', '')
     const validToken = verifyJwt(parsedToken)
-    const userLogued = await User.findById(validToken.id)
+    const user = await User.findById(validToken.id)
 
-    userLogued.password = null
-    req.user = userLogued
+    if (user.type !== 'admin') {
+      return next(setError(401, 'Unauthorized. Only admins allowed.'))
+    }
+
+    user.password = null
+    req.user = user
     next()
   } catch (err) {
-    console.error(err)
     return next(setError(400, 'Wrong authorization'))
   }
 }
 
-module.exports = { isAuth }
+module.exports = { isAdmin }

@@ -7,12 +7,13 @@ const {
   createDestination,
   deleteDestination
 } = require('../Controller/destination')
-const { isAuth } = require('../Middleware/auth')
+
+const { isAdmin } = require('../Middleware/admin')
 
 destinationRouter.get('/', getAllDestinations)
 destinationRouter.get('/:id', getDestinationById)
-destinationRouter.post('/', [isAuth], createDestination)
-// destinationRouter.put('/:id', [isAuth], updateDestination)
-destinationRouter.delete('/:id', [isAuth], deleteDestination)
+destinationRouter.post('/', [isAdmin], createDestination)
+// destinationRouter.put('/:id', [isAdmin], updateDestination)
+destinationRouter.delete('/:id', [isAdmin], deleteDestination)
 
 module.exports = destinationRouter

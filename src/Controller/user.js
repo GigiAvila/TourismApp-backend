@@ -112,22 +112,15 @@ const loginUser = async (req, res, next) => {
       password
     }
 
-    let loginSuccessful = false
-    const userIsLoggedIn = await loginUserInDB(loginData)
+    const loginRes = await loginUserInDB(loginData)
 
-    if (userIsLoggedIn) {
-      loginSuccessful = true
-
-      res.status(200).json({ data: 'User is now logged in' })
-    }
-
-    if (!loginSuccessful) {
-      res
-        .status(401)
-        .json({ error: 'Authentication failed. Passwords do not match.' })
+    if (loginRes.success) {
+      res.status(200).json({ data: loginRes.message, token: loginRes.token })
+    } else {
+      res.status(401).json({ error: loginRes.message })
     }
   } catch (error) {
-    return next(setError(400, "Can't login "))
+    return next(setError(400, "Can't login"))
   }
 }
 
