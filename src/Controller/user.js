@@ -45,13 +45,16 @@ const deleteUser = async (req, res, next) => {
 const updateUser = async (req, res, next) => {
   try {
     const { id } = req.params
-    const { name, surname, country, email, selection } = req.body
+    const { name, surname, country, email, selection, type } = req.body
+    const avatar = req.file ? req.file.path : undefined
 
     const userUpdateData = {
       name,
       surname,
       country,
       email,
+      avatar,
+      type,
       selection: {
         city: selection.city,
         hotel: selection.hotel,
@@ -69,8 +72,8 @@ const updateUser = async (req, res, next) => {
 
 const registerUser = async (req, res, next) => {
   try {
-    const { name, surname, country, email, selection, userName, password } =
-      req.body
+    const { name, surname, country, email, userName, password } = req.body
+    const avatar = req.file ? req.file.path : undefined
 
     const hashedPassword = bcrypt.hashSync(password, 10)
 
@@ -81,11 +84,7 @@ const registerUser = async (req, res, next) => {
       email,
       userName,
       password: hashedPassword,
-      selection: {
-        city: selection.city,
-        hotel: selection.hotel,
-        excursion: selection.excursion
-      }
+      avatar
     })
 
     if (newUser) {
@@ -120,6 +119,7 @@ const loginUser = async (req, res, next) => {
       res.status(401).json({ error: loginRes.message })
     }
   } catch (error) {
+    console.error(error)
     return next(setError(400, "Can't login"))
   }
 }

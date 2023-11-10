@@ -4,9 +4,17 @@ const app = express()
 require('./Config/db')
 const cors = require('cors')
 const { rateLimit } = require('express-rate-limit')
+const cloudinary = require('cloudinary').v2
 const { setError } = require('./config/error')
 const seedFunctions = require('./Config/seed')
 seedFunctions()
+
+//CLOUDINARY
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
+})
 
 // CORS
 app.use(
@@ -34,7 +42,7 @@ app.use(express.urlencoded({ limit: '1mb', extended: true }))
 const mainRouter = require('./Routes/indexRouter')
 app.use('/api', mainRouter)
 
-// Controlador de errores
+// ERRORS
 app.use('*', (req, res, next) => {
   return next(setError(404, 'Not Found'))
 })
@@ -45,6 +53,7 @@ app.use((error, req, res, next) => {
     .json(error.message || 'Internal Server Error')
 })
 
+// LOCAL - PORT - CONFIG
 const PORT = 4001
 app.listen(PORT, () => {
   console.log(

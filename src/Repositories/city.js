@@ -158,6 +158,7 @@ const getCityByIdFromDB = async (id) => {
 }
 
 const createCityInDB = async (payload) => {
+  console.log(payload)
   const newCity = new City(payload)
   await newCity.save()
   return newCity

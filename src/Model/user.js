@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema(
     country: { type: String, required: false, trim: true },
     email: { type: String, required: false, trim: true },
     userName: { type: String, required: false, trim: true },
-    password: { type: String, required: false, trim: true }
+    password: { type: String, required: false, trim: true },
+    avatar: { type: String, required: false, trim: true }
   },
   {
     timestamps: true,

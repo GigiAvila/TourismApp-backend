@@ -32,7 +32,8 @@ const createHotel = async (req, res, next) => {
   try {
     const newHotel = await createHotelInDB({
       name: req.body.name,
-      users: req.body.users
+      users: req.body.users,
+      hotelImg: req.file.path
     })
     res.status(201).json({ data: newHotel })
   } catch (error) {
@@ -57,10 +58,12 @@ const updateHotel = async (req, res, next) => {
   try {
     const { id } = req.params
     const { name, users } = req.body
+    const hotelImg = req.file ? req.file.path : undefined
 
     const hotelUpdateData = {
       name,
-      users
+      users,
+      hotelImg
     }
 
     const hotel = await updateHotelByIdInDB(id, hotelUpdateData)

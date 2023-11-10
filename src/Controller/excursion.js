@@ -32,7 +32,8 @@ const createExcursion = async (req, res, next) => {
   try {
     const newExcursion = await createExcursionInDB({
       name: req.body.name,
-      users: req.body.users
+      users: req.body.users,
+      excursionImg: req.file.path
     })
     res.status(201).json({ data: newExcursion })
   } catch (error) {
@@ -57,10 +58,12 @@ const updateExcursion = async (req, res, next) => {
   try {
     const { id } = req.params
     const { name, users } = req.body
+    const excursionImg = req.file ? req.file.path : undefined
 
     const excursionUpdateData = {
       name,
-      users
+      users,
+      excursionImg
     }
 
     const excursion = await updateExcursionByIdInDB(id, excursionUpdateData)

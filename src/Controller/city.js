@@ -34,10 +34,12 @@ const createCity = async (req, res, next) => {
       name: req.body.name,
       users: req.body.users,
       hotels: req.body.hotels,
-      excursions: req.body.excursions
+      excursions: req.body.excursions,
+      cityImg: req.file.path
     })
     res.status(201).json({ data: newCity })
   } catch (error) {
+    console.log(error)
     return next(setError(400, "Can't create city"))
   }
 }
@@ -59,10 +61,12 @@ const updateCity = async (req, res, next) => {
   try {
     const { id } = req.params
     const { name, users } = req.body
+    const cityImg = req.file ? req.file.path : undefined
 
     const cityUpdateData = {
       name,
-      users
+      users,
+      cityImg
     }
 
     const city = await updateCityByIdInDB(id, cityUpdateData)
