@@ -14,6 +14,25 @@ const isAuth = async (req, res, next) => {
     const validToken = verifyJwt(parsedToken)
     const userLogued = await User.findById(validToken.id)
 
+    if (!userLogued) {
+      return next(setError(404, 'User not found'))
+    }
+
+    if (
+      !(
+        userLogued.type === 'admin' ||
+        (userLogued.type === 'user' &&
+          userLogued._id.toString() === req.params.id)
+      )
+    ) {
+      return next(
+        setError(
+          401,
+          'Unauthorized. Only admins or the user itself are allowed.'
+        )
+      )
+    }
+
     userLogued.password = null
     req.user = userLogued
     next()

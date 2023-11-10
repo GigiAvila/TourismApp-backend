@@ -198,8 +198,13 @@ const loginUserInDB = async (payload) => {
 
   if (bcrypt.compareSync(payload.password, user.password)) {
     generateSign(user._id)
-    console.log('>>>> ⛑️ User is now signed in')
-    return { success: true, message: 'User is now logged in' }
+    if (user.type === 'admin') {
+      console.log('>>>> ⛑️ Master User is now signed in')
+      return { success: true, message: 'Master User is now logged in' }
+    } else {
+      console.log('>>>> ⛑️ User is now signed in')
+      return { success: true, message: 'User is now logged in' }
+    }
   } else {
     console.log('>>>> ⛑️ Passwords do not match')
     return { success: false, message: 'Passwords do not match' }
