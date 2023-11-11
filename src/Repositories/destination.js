@@ -1,4 +1,4 @@
-const Destination = require('../Model/Destination')
+const Destination = require('../Model/destination')
 const seed = require('../Seed/seed')
 
 const cleanDestinationCollections = async () => {
