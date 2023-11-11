@@ -1,12 +1,12 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-require('./Config/db')
+require('./src/Config/db')
 const cors = require('cors')
 const { rateLimit } = require('express-rate-limit')
 const cloudinary = require('cloudinary').v2
-const { setError } = require('./config/error')
-const seedFunctions = require('./Config/seed')
+const { setError } = require('./src/config/error')
+const seedFunctions = require('./src/Config/seed')
 seedFunctions()
 
 //CLOUDINARY
@@ -39,7 +39,7 @@ app.use(express.json({ limit: '1mb' }))
 app.use(express.urlencoded({ limit: '1mb', extended: true }))
 
 //Router
-const mainRouter = require('./Routes/indexRouter')
+const mainRouter = require('./src/Routes/indexRouter')
 app.use('/api', mainRouter)
 
 // ERRORS
