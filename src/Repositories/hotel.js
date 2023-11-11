@@ -1,3 +1,4 @@
+const { deleteFile } = require('../Middleware/deleteFile')
 const Hotel = require('../Model/hotel')
 const seed = require('../Seed/seed')
 
@@ -95,6 +96,8 @@ const updateHotelByIdInDB = async (id, payload) => {
   const newHotel = new Hotel(payload)
 
   newHotel._id = id
+
+  newHotel.hotelImg && oldHotel.hotelImg ? deleteFile(oldHotel.hotelImg) : null
 
   if (newHotel.users) {
     newHotel.users = [...oldHotel.users, ...newHotel.users]

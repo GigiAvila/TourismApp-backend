@@ -39,7 +39,6 @@ const createCity = async (req, res, next) => {
     })
     res.status(201).json({ data: newCity })
   } catch (error) {
-    console.log(error)
     return next(setError(400, "Can't create city"))
   }
 }

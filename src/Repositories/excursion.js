@@ -1,3 +1,4 @@
+const { deleteFile } = require('../Middleware/deleteFile')
 const Excursion = require('../Model/excursion')
 const seed = require('../Seed/seed')
 
@@ -102,6 +103,10 @@ const updateExcursionByIdInDB = async (id, payload) => {
   const newExcursion = new Excursion(payload)
 
   newExcursion._id = id
+
+  newExcursion.excursionImg && oldExcursion.excursionImg
+    ? deleteFile(oldExcursion.excursionImg)
+    : null
 
   if (newExcursion.users) {
     newExcursion.users = [...oldExcursion.users, ...newExcursion.users]

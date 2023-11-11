@@ -7,7 +7,7 @@ const isAuth = async (req, res, next) => {
     const token = req.headers.authorization
 
     if (!token) {
-      return next(setError(400, 'You are not authorized to access here'))
+      return next(setError(400, 'You have to introduce your token'))
     }
 
     const parsedToken = token.replace('Bearer ', '')

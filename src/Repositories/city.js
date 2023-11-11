@@ -1,3 +1,4 @@
+const { deleteFile } = require('../Middleware/deleteFile')
 const City = require('../Model/city')
 const seed = require('../Seed/seed')
 
@@ -173,6 +174,7 @@ const updateCityByIdInDB = async (id, payload) => {
   const newCity = new City(payload)
 
   newCity._id = id
+  newCity.cityImg && oldCity.cityImg ? deleteFile(oldCity.cityImg) : null
 
   if (newCity.users) {
     newCity.users = [...oldCity.users, ...newCity.users]

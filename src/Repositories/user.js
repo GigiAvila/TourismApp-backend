@@ -2,6 +2,7 @@ const User = require('../Model/user')
 const seed = require('../Seed/seed')
 const bcrypt = require('bcrypt')
 const { generateSign } = require('../Config/jwt')
+const { deleteFile } = require('../Middleware/deleteFile')
 
 const cleanUserCollections = async () => {
   await User.collection.drop()
@@ -151,6 +152,8 @@ const updateUserByIdInDB = async (id, payload) => {
   const newUser = new User(payload)
 
   newUser._id = id
+
+  newUser.avatar && oldUser.avatar ? deleteFile(oldUser.avatar) : null
 
   if (newUser.selection.excursion) {
     const oldExcursions = oldUser.selection.excursion.map((excursion) =>
