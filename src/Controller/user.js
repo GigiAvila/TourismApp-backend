@@ -8,7 +8,7 @@ const {
   deleteUserFromDB,
   updateUserByIdInDB
 } = require('../Repositories/user')
-const { setError } = require('../Config/error')
+const { setError } = require('../config/error')
 
 const getAllUsers = async (req, res, next) => {
   try {

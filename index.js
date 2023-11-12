@@ -1,12 +1,12 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-require('./src/Config/db')
+require('./src/config/db')
 const cors = require('cors')
 const { rateLimit } = require('express-rate-limit')
 const cloudinary = require('cloudinary').v2
 const { setError } = require('./src/config/error')
-const seedFunctions = require('./src/Config/seed')
+const seedFunctions = require('./src/config/seed')
 seedFunctions()
 
 //CLOUDINARY

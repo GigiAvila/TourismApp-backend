@@ -6,7 +6,7 @@ const {
   updateHotelByIdInDB
 } = require('../Repositories/hotel')
 
-const { setError } = require('../Config/error')
+const { setError } = require('../config/error')
 
 const getAllHotels = async (req, res, next) => {
   try {
