@@ -6,7 +6,7 @@ const {
   updateCityByIdInDB
 } = require('../Repositories/city')
 
-const { setError } = require('../config/error')
+const { setError } = require('../Config/error')
 
 const getAllCities = async (req, res) => {
   try {

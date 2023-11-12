@@ -4,7 +4,7 @@ const {
   createDestinationInDB,
   deleteDestinationFromDB
 } = require('../Repositories/destination.js')
-const { setError } = require('../config/error')
+const { setError } = require('../Config/error')
 
 const getAllDestinations = async (req, res, next) => {
   try {

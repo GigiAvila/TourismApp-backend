@@ -5,7 +5,7 @@ require('./src/Config/db')
 const cors = require('cors')
 const { rateLimit } = require('express-rate-limit')
 const cloudinary = require('cloudinary').v2
-const { setError } = require('./src/Config/error')
+const { setError } = require('./src/config/error')
 const seedFunctions = require('./src/Config/seed')
 seedFunctions()
 

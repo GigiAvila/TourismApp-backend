@@ -6,7 +6,7 @@ const {
   updateExcursionByIdInDB
 } = require('../Repositories/excursion')
 
-const { setError } = require('../config/error')
+const { setError } = require('../Config/error')
 
 const getAllExcursions = async (req, res, next) => {
   try {
