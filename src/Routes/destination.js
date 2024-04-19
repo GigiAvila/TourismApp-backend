@@ -6,9 +6,9 @@ const {
   getDestinationById,
   createDestination,
   deleteDestination
-} = require('../Controller/destination')
+} = require('../controller/destination')
 
-const { isAdmin } = require('../Middleware/admin')
+const { isAdmin } = require('../middleware/admin')
 
 destinationRouter.get('/', getAllDestinations)
 destinationRouter.get('/:id', getDestinationById)

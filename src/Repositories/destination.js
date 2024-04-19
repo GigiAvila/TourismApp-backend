@@ -1,5 +1,5 @@
-const Destination = require('../Model/destination')
-const seed = require('../Seed/seed')
+const Destination = require('../model/destination')
+const seed = require('../seed/seed')
 
 const cleanDestinationCollections = async () => {
   await Destination.collection.drop()
@@ -50,16 +50,21 @@ const cleanDestinationPrivateFields = async () => {
 }
 
 const getAllDestinationsFromDB = async (filter) => {
-  const countryFilterOptions = {
-    country: { $regex: new RegExp(filter, 'i') }
+  const nameFilterOptions = {
+    name: { $regex: new RegExp(filter, 'i') }
   }
   const destinations = await Destination.find(
-    filter ? countryFilterOptions : {}
-  )
+    filter ? nameFilterOptions : {}
+  ).populate({
+    path: 'cities',
+    model: 'City',
+    select: {
+      name: true
+    }
+  })
 
   return destinations
 }
-
 const getDestinationByIdFromDB = async (id) => {
   const destination = await Destination.findById(id)
   return destination

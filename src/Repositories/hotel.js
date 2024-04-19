@@ -1,6 +1,6 @@
-const { deleteFile } = require('../Middleware/deleteFile')
-const Hotel = require('../Model/hotel')
-const seed = require('../Seed/seed')
+const { deleteFile } = require('../middleware/deleteFile')
+const Hotel = require('../model/hotel')
+const seed = require('../seed/seed')
 
 const cleanHotelCollections = async () => {
   await Hotel.collection.drop()

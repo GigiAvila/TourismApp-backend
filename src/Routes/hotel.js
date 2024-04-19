@@ -6,9 +6,9 @@ const {
   createHotel,
   deleteHotel,
   updateHotel
-} = require('../Controller/hotel')
-const upload = require('../Middleware/file')
-const { isAdmin } = require('../Middleware/admin')
+} = require('../controller/hotel')
+const upload = require('../middleware/file')
+const { isAdmin } = require('../middleware/admin')
 
 hotelRouter.get('/', getAllHotels)
 hotelRouter.get('/:id', getHotelById)

@@ -39,7 +39,7 @@ app.use(express.json({ limit: '1mb' }))
 app.use(express.urlencoded({ limit: '1mb', extended: true }))
 
 //Router
-const mainRouter = require('./src/Routes/indexRouter')
+const mainRouter = require('./src/routes/indexRouter')
 app.use('/api', mainRouter)
 
 // ERRORS

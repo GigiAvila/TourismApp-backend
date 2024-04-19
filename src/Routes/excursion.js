@@ -6,9 +6,9 @@ const {
   createExcursion,
   deleteExcursion,
   updateExcursion
-} = require('../Controller/excursion')
-const { isAdmin } = require('../Middleware/admin')
-const upload = require('../Middleware/file')
+} = require('../controller/excursion')
+const { isAdmin } = require('../middleware/admin')
+const upload = require('../middleware/file')
 
 excursionRouter.get('/', getAllExcursions)
 excursionRouter.get('/:id', getExcursionById)

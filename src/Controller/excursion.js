@@ -4,7 +4,7 @@ const {
   createExcursionInDB,
   deleteExcursionFromDB,
   updateExcursionByIdInDB
-} = require('../Repositories/excursion')
+} = require('../repositories/excursion')
 
 const { setError } = require('../config/error')
 

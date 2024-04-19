@@ -4,7 +4,7 @@ const {
   createCityInDB,
   deleteCityFromDB,
   updateCityByIdInDB
-} = require('../Repositories/city')
+} = require('../repositories/city')
 
 const { setError } = require('../config/error')
 

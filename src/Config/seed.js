@@ -3,14 +3,14 @@ const {
   saveDestinationDocuments,
   updateCitiesInDestinationInDB,
   cleanDestinationPrivateFields
-} = require('../Repositories/destination')
+} = require('../repositories/destination')
 
 const {
   cleanUserCollections,
   saveUserDocuments,
   updateUserSelectionsInDB,
   cleanUserPrivateFields
-} = require('../Repositories/user')
+} = require('../repositories/user')
 
 const {
   cleanCityCollections,
@@ -19,21 +19,21 @@ const {
   updateHotelInCityInDB,
   updateExcursionInCityInDB,
   cleanCityPrivateFields
-} = require('../Repositories/city')
+} = require('../repositories/city')
 
 const {
   cleanHotelCollections,
   saveHotelDocuments,
   updateUsersInHotelsInDB,
   cleanHotelPrivateFields
-} = require('../Repositories/hotel')
+} = require('../repositories/hotel')
 
 const {
   cleanExcursionCollections,
   saveExcursionDocuments,
   updateUsersInExcursionsInDB,
   cleanExcursionPrivateFields
-} = require('../Repositories/excursion')
+} = require('../repositories/excursion')
 
 const seedFunctions = async () => {
   await cleanDestinationCollections()

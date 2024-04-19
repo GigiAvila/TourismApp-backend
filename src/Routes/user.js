@@ -7,10 +7,10 @@ const {
   updateUser,
   registerUser,
   loginUser
-} = require('../Controller/user')
-const { isAuth } = require('../Middleware/auth')
-const { isAdmin } = require('../Middleware/admin')
-const upload = require('../Middleware/file')
+} = require('../controller/user')
+const { isAuth } = require('../middleware/auth')
+const { isAdmin } = require('../middleware/admin')
+const upload = require('../middleware/file')
 
 userRouter.get('/', [isAdmin], getAllUsers)
 userRouter.get('/:id', [isAdmin], getUserById)

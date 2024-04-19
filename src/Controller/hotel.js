@@ -4,7 +4,7 @@ const {
   createHotelInDB,
   deleteHotelFromDB,
   updateHotelByIdInDB
-} = require('../Repositories/hotel')
+} = require('../repositories/hotel')
 
 const { setError } = require('../config/error')
 

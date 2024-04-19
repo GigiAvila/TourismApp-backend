@@ -1,6 +1,6 @@
-const { deleteFile } = require('../Middleware/deleteFile')
-const Excursion = require('../Model/excursion')
-const seed = require('../Seed/seed')
+const { deleteFile } = require('../middleware/deleteFile')
+const Excursion = require('../model/excursion')
+const seed = require('../seed/seed')
 
 const cleanExcursionCollections = async () => {
   await Excursion.collection.drop()

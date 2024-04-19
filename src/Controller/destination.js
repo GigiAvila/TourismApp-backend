@@ -3,7 +3,7 @@ const {
   getDestinationByIdFromDB,
   createDestinationInDB,
   deleteDestinationFromDB
-} = require('../Repositories/destination.js')
+} = require('../repositories/destination.js')
 const { setError } = require('../config/error.js')
 
 const getAllDestinations = async (req, res, next) => {

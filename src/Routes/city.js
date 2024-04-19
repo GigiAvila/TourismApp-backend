@@ -6,9 +6,9 @@ const {
   createCity,
   deleteCity,
   updateCity
-} = require('../Controller/city')
-const { isAdmin } = require('../Middleware/admin')
-const uploadMiddleware = require('../Middleware/file')
+} = require('../controller/city')
+const { isAdmin } = require('../middleware/admin')
+const uploadMiddleware = require('../middleware/file')
 
 cityRouter.get('/', getAllCities)
 cityRouter.get('/:id', getCityById)

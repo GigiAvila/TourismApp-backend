@@ -1,8 +1,8 @@
-const User = require('../Model/user')
-const seed = require('../Seed/seed')
+const User = require('../model/user')
+const seed = require('../seed/seed')
 const bcrypt = require('bcrypt')
 const { generateSign } = require('../config/jwt')
-const { deleteFile } = require('../Middleware/deleteFile')
+const { deleteFile } = require('../middleware/deleteFile')
 
 const cleanUserCollections = async () => {
   await User.collection.drop()

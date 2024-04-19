@@ -1,6 +1,6 @@
-const { deleteFile } = require('../Middleware/deleteFile')
-const City = require('../Model/city')
-const seed = require('../Seed/seed')
+const { deleteFile } = require('../middleware/deleteFile')
+const City = require('../model/city')
+const seed = require('../seed/seed')
 
 const cleanCityCollections = async () => {
   await City.collection.drop()

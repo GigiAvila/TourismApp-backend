@@ -1,6 +1,6 @@
 const { verifyJwt } = require('../config/jwt')
 const { setError } = require('../config/error')
-const User = require('../Model/user')
+const User = require('../model/user')
 
 const isAuth = async (req, res, next) => {
   try {

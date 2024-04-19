@@ -1,4 +1,4 @@
-const User = require('../Model/user')
+const User = require('../model/user')
 const bcrypt = require('bcrypt')
 const {
   getAllUsersFromDB,
@@ -7,7 +7,7 @@ const {
   loginUserInDB,
   deleteUserFromDB,
   updateUserByIdInDB
-} = require('../Repositories/user')
+} = require('../repositories/user')
 const { setError } = require('../config/error')
 
 const getAllUsers = async (req, res, next) => {
