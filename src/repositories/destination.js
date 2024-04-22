@@ -55,7 +55,14 @@ const getAllDestinationsFromDB = async (filter) => {
   }
   const destinations = await Destination.find(
     filter ? countryFilterOptions : {}
-  )
+  ).populate({
+    path: 'cities',
+    model: 'City',
+    select: {
+      _id: true,
+      name: true
+    }
+  })
 
   return destinations
 }
