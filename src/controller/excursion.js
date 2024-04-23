@@ -33,6 +33,10 @@ const createExcursion = async (req, res, next) => {
     const newExcursion = await createExcursionInDB({
       name: req.body.name,
       users: req.body.users,
+      language: req.body.language,
+      cancelation: req.body.cancelation,
+      description: req.body.description,
+      duration: req.body.duration,
       excursionImg: req.file.path
     })
     res.status(201).json({ data: newExcursion })
@@ -57,7 +61,8 @@ const deleteExcursion = async (req, res, next) => {
 const updateExcursion = async (req, res, next) => {
   try {
     const { id } = req.params
-    const { name, users, description, duration } = req.body
+    const { name, users, description, duration, cancelation, language } =
+      req.body
     const excursionImg = req.file ? req.file.path : undefined
 
     const excursionUpdateData = {
@@ -65,7 +70,9 @@ const updateExcursion = async (req, res, next) => {
       users,
       excursionImg,
       description,
-      duration
+      duration,
+      cancelation,
+      language
     }
 
     const excursion = await updateExcursionByIdInDB(id, excursionUpdateData)
