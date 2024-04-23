@@ -7,8 +7,7 @@ const seed = {
         {
           _cityId: 1,
           name: 'Madrid',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713861188/florian-wehde-WBGjg0DsO_g-unsplash_fvvarg.jpg',
+          cityImg: 'url',
           _users: [1, 16],
           _hotels: [
             {
@@ -69,7 +68,8 @@ const seed = {
         {
           _cityId: 2,
           name: 'Barcelona',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864303/logan-armstrong-hVhfqhDYciU-unsplash_rzxn3w.jpg',
           _users: [2, 14],
           _hotels: [
             {
@@ -130,7 +130,8 @@ const seed = {
         {
           _cityId: 3,
           name: 'Paris',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864369/chris-karidis-nnzkZNYWHaU-unsplash_ctkbpv.jpg',
           _users: [15, 3],
           _hotels: [
             {
@@ -191,7 +192,8 @@ const seed = {
         {
           _cityId: 4,
           name: 'Nice',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864444/paul-teysen-ymOyn55Ztyk-unsplash_io8bxg.jpg',
           _users: [4],
           _hotels: [
             {
@@ -252,7 +254,8 @@ const seed = {
         {
           _cityId: 5,
           name: 'Berlin',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864486/florian-wehde-1uWanmgkd5g-unsplash_mwmwfv.jpg',
           _users: [17, 5],
           _hotels: [
             {
@@ -307,7 +310,8 @@ const seed = {
         {
           _cityId: 6,
           name: 'Munich',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864531/ian-kelsall-MEUvVqkU3QI-unsplash_wzjd7l.jpg',
           _users: [6, 11],
           _hotels: [
             {
@@ -368,7 +372,8 @@ const seed = {
         {
           _cityId: 7,
           name: 'Lisbon',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864590/aayush-gupta-ljhCEaHYWJ8-unsplash_l0w9ig.jpg',
           _users: [7],
           _hotels: [
             {
@@ -423,7 +428,8 @@ const seed = {
         {
           _cityId: 8,
           name: 'Porto',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864645/daniel-sessler-YVj9hyQgtkY-unsplash_pdz1vu.jpg',
           _users: [12, 8],
           _hotels: [
             {
@@ -484,7 +490,8 @@ const seed = {
         {
           _cityId: 9,
           name: 'Rio de Janeiro',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864980/agustin-diaz-gargiulo-7F65HDP0-E0-unsplash_psloyq.jpg',
           _users: [18, 9],
           _hotels: [
             {
@@ -539,7 +546,8 @@ const seed = {
         {
           _cityId: 10,
           name: 'Sao Paulo',
-          cityImg: 'url',
+          cityImg:
+            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713865049/bruno-thethe-nxkinK7hhOk-unsplash_jql8im.jpg',
           _users: [10, 13],
           _hotels: [
             {
