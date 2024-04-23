@@ -7,7 +7,7 @@ const seed = {
         {
           _cityId: 1,
           name: 'Madrid',
-          cityImg: 'url',
+          cityImg: 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713861188/florian-wehde-WBGjg0DsO_g-unsplash_fvvarg.jpg',
           _users: [1, 16],
           _hotels: [
             {
