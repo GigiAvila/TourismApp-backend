@@ -7,8 +7,7 @@ const seed = {
         {
           _cityId: 1,
           name: 'Madrid',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713861188/florian-wehde-WBGjg0DsO_g-unsplash_fvvarg.jpg',
+          cityImg: 'url',
           _users: [1, 16],
           _hotels: [
             {
@@ -41,33 +40,18 @@ const seed = {
               _excursionId: 1,
               name: 'Toledo Day Trip',
               excursionImg: 'url',
-              description:
-                'Enjoy a full-day trip to the ancient city of Toledo, known for its historic buildings and rich cultural heritage.',
-              duration: 60,
-              cancelation: true,
-              language: ['english', 'spanish'],
               _users: []
             },
             {
               _excursionId: 2,
               name: 'Segovia Excursion',
               excursionImg: 'url',
-              description:
-                'Embark on a journey to Segovia, famous for its stunning Roman aqueduct and medieval architecture.',
-              duration: 30,
-              cancelation: true,
-              language: ['english', 'spanish'],
               _users: []
             },
             {
               _excursionId: 3,
               name: 'Avila Tour',
               excursionImg: 'url',
-              description:
-                'Explore the walled city of Avila, a UNESCO World Heritage Site, and immerse yourself in its fascinating history.',
-              language: ['english', 'spanish'],
-              duration: 45,
-              cancelation: true,
               _users: [1, 16]
             }
           ]
@@ -75,8 +59,7 @@ const seed = {
         {
           _cityId: 2,
           name: 'Barcelona',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864303/logan-armstrong-hVhfqhDYciU-unsplash_rzxn3w.jpg',
+          cityImg: 'url',
           _users: [2, 14],
           _hotels: [
             {
@@ -102,34 +85,19 @@ const seed = {
             {
               _excursionId: 4,
               name: 'Montserrat Day Trip',
-              description:
-                'Experience the beauty of Montserrat mountain and its Benedictine monastery on a day trip from Barcelona.',
-              duration: 360, // 6 hours
               excursionImg: 'url',
-              cancelation: true,
-              language: ['english', 'spanish'],
               _users: [14]
             },
             {
               _excursionId: 5,
               name: 'Costa Brava Excursion',
               excursionImg: 'url',
-              description:
-                'Explore the stunning coastline of Costa Brava, with its pristine beaches and charming coastal towns.',
-              duration: 420, // 7 hours
-              cancelation: true,
-              language: ['english', 'spanish'],
               _users: [2]
             },
             {
               _excursionId: 6,
               name: 'Tarragona Tour',
-              description:
-                'Discover the ancient Roman ruins of Tarragona and its picturesque old town on a guided tour.',
-              duration: 300, // 5 hours
               excursionImg: 'url',
-              cancelation: false,
-              language: ['english', 'spanish'],
               _users: [2, 14]
             }
           ]
@@ -143,8 +111,7 @@ const seed = {
         {
           _cityId: 3,
           name: 'Paris',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864369/chris-karidis-nnzkZNYWHaU-unsplash_ctkbpv.jpg',
+          cityImg: 'url',
           _users: [15, 3],
           _hotels: [
             {
@@ -176,34 +143,19 @@ const seed = {
             {
               _excursionId: 7,
               name: 'Versailles Palace Day Trip',
-              description:
-                'Discover the grandeur of the Palace of Versailles and its magnificent gardens on a guided day trip from Paris.',
-              duration: 360, // 6 hours
               excursionImg: 'url',
-              cancelation: true,
-              language: ['english', 'spanish', 'french'],
               _users: []
             },
             {
               _excursionId: 8,
               name: 'Mont Saint-Michel Excursion',
-              description:
-                'Journey to the mystical island of Mont Saint-Michel, marveling at its medieval abbey and breathtaking views.',
-              duration: 420, // 7 hours
               excursionImg: 'url',
-              cancelation: false,
-              language: ['english', 'spanish', 'french'],
               _users: [3, 15]
             },
             {
               _excursionId: 9,
               name: 'Champagne Tour',
               excursionImg: 'url',
-              description:
-                'Indulge in a tour of the Champagne region, visiting renowned wineries and tasting exquisite sparkling wines.',
-              duration: 540,
-              cancelation: true,
-              language: ['english', 'spanish', 'french'],
               _users: [3]
             }
           ]
@@ -211,8 +163,7 @@ const seed = {
         {
           _cityId: 4,
           name: 'Nice',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864444/paul-teysen-ymOyn55Ztyk-unsplash_io8bxg.jpg',
+          cityImg: 'url',
           _users: [4],
           _hotels: [
             {
@@ -239,33 +190,18 @@ const seed = {
               _excursionId: 10,
               name: 'Monaco Day Trip',
               excursionImg: 'url',
-              description:
-                'Embark on a glamorous day trip to Monaco, exploring its luxurious casinos, stunning coastline, and historic sites.',
-              duration: 480, // 8 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'french'],
               _users: [4]
             },
             {
               _excursionId: 11,
               name: 'Cannes Excursion',
               excursionImg: 'url',
-              description:
-                'Experience the allure of Cannes on a day excursion, wandering along the famous Croisette Boulevard and soaking in the glitz and glamour of the French Riviera.',
-              duration: 360, // 6 hours
-              cancelation: false,
-              language: ['english', 'spanish', 'french'],
               _users: [4]
             },
             {
               _excursionId: 12,
               name: 'Eze Tour',
               excursionImg: 'url',
-              description:
-                'Discover the medieval charm of Eze on a guided tour, wandering through narrow streets, visiting artisan shops, and enjoying panoramic views of the Mediterranean.',
-              duration: 300, // 5 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'french'],
               _users: [4]
             }
           ]
@@ -279,8 +215,7 @@ const seed = {
         {
           _cityId: 5,
           name: 'Berlin',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864486/florian-wehde-1uWanmgkd5g-unsplash_mwmwfv.jpg',
+          cityImg: 'url',
           _users: [17, 5],
           _hotels: [
             {
@@ -307,33 +242,18 @@ const seed = {
               _excursionId: 13,
               name: 'Potsdam Day Trip',
               excursionImg: 'url',
-              description:
-                'Explore the Prussian past with a day trip to Potsdam, discovering its palaces, parks, and historic landmarks.',
-              duration: 360, // 6 hours
-              cancelation: true,
-              language: ['english', 'spanish'],
               _users: [17]
             },
             {
               _excursionId: 14,
               name: 'Dresden Excursion',
               excursionImg: 'url',
-              description:
-                'Step back in time with a day excursion to Dresden, admiring its baroque architecture, visiting museums, and strolling along the Elbe River.',
-              duration: 480, // 8 hours
-              cancelation: true,
-              language: ['english', 'spanish'],
               _users: []
             },
             {
               _excursionId: 15,
               name: 'Leipzig Tour',
-              description:
-                'Experience the vibrant cultural scene of Leipzig on a guided tour, exploring its music venues, historic squares, and bustling markets.',
-              duration: 300, // 5 hours
               excursionImg: 'url',
-              language: ['english', 'spanish'],
-              cancelation: true,
               _users: []
             }
           ]
@@ -341,8 +261,7 @@ const seed = {
         {
           _cityId: 6,
           name: 'Munich',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864531/ian-kelsall-MEUvVqkU3QI-unsplash_wzjd7l.jpg',
+          cityImg: 'url',
           _users: [6, 11],
           _hotels: [
             {
@@ -368,34 +287,19 @@ const seed = {
             {
               _excursionId: 16,
               name: 'Neuschwanstein Castle Day Trip',
-              description:
-                'Embark on a fairytale journey with a day trip to Neuschwanstein Castle, exploring its majestic architecture, scenic surroundings, and enchanting tales.',
-              duration: 540, // 9 hours
               excursionImg: 'url',
-              cancelation: true,
-              language: ['english', 'spanish'],
               _users: [11]
             },
             {
               _excursionId: 17,
               name: 'Salzburg Excursion',
-              description:
-                "Discover the musical heritage and charming streets of Salzburg on a day excursion, visiting Mozart's birthplace, wandering through gardens, and enjoying alpine views.",
-              duration: 420, // 7 hours
               excursionImg: 'url',
-              cancelation: false,
-              language: ['english', 'spanish'],
               _users: []
             },
             {
               _excursionId: 18,
               name: 'Nuremberg Tour',
-              description:
-                'Explore the medieval streets and rich history of Nuremberg on a guided tour, visiting its castle, museums, and famous Christmas market.',
-              duration: 360, // 6 hours
               excursionImg: 'url',
-              cancelation: true,
-              language: ['english', 'spanish'],
               _users: [6]
             }
           ]
@@ -409,8 +313,7 @@ const seed = {
         {
           _cityId: 7,
           name: 'Lisbon',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864590/aayush-gupta-ljhCEaHYWJ8-unsplash_l0w9ig.jpg',
+          cityImg: 'url',
           _users: [7],
           _hotels: [
             {
@@ -437,33 +340,18 @@ const seed = {
               _excursionId: 19,
               name: 'Sintra Day Trip',
               excursionImg: 'url',
-              description:
-                'Embark on a journey to the enchanting town of Sintra, exploring its fairytale palaces, lush gardens, and stunning landscapes.',
-              duration: 420, // 7 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: []
             },
             {
               _excursionId: 20,
               name: 'Cascais Excursion',
               excursionImg: 'url',
-              description:
-                'Discover the coastal beauty of Cascais on a guided excursion, visiting its sandy beaches, picturesque streets, and charming fishing harbor.',
-              duration: 300, // 5 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: []
             },
             {
               _excursionId: 21,
               name: 'Fátima Tour',
               excursionImg: 'url',
-              description:
-                'Experience the spiritual atmosphere of Fátima on a guided tour, visiting its renowned sanctuary, attending mass, and learning about its religious significance.',
-              duration: 360, // 6 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: []
             }
           ]
@@ -471,8 +359,7 @@ const seed = {
         {
           _cityId: 8,
           name: 'Porto',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864645/daniel-sessler-YVj9hyQgtkY-unsplash_pdz1vu.jpg',
+          cityImg: 'url',
           _users: [12, 8],
           _hotels: [
             {
@@ -499,33 +386,18 @@ const seed = {
               _excursionId: 22,
               name: 'Douro Valley Day Trip',
               excursionImg: 'url',
-              description:
-                'Explore the scenic Douro Valley on a full-day excursion, visiting vineyards, tasting regional wines, and cruising along the Douro River.',
-              duration: 540, // 9 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: [8]
             },
             {
               _excursionId: 23,
               name: 'Guimaraes Excursion',
               excursionImg: 'url',
-              description:
-                'Discover the medieval charm of Guimarães on a guided tour, exploring its historic center, castle, and narrow streets lined with traditional houses.',
-              duration: 360, // 6 hours
-              cancelation: false,
-              language: ['english', 'spanish', 'portuguese'],
               _users: [8, 12]
             },
             {
               _excursionId: 24,
               name: 'Aveiro Tour',
               excursionImg: 'url',
-              description:
-                'Experience the "Venice of Portugal" with a guided tour of Aveiro, cruising along its canals, admiring colorful moliceiro boats, and indulging in delicious local cuisine.',
-              duration: 300, // 5 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: []
             }
           ]
@@ -539,8 +411,7 @@ const seed = {
         {
           _cityId: 9,
           name: 'Rio de Janeiro',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864980/agustin-diaz-gargiulo-7F65HDP0-E0-unsplash_psloyq.jpg',
+          cityImg: 'url',
           _users: [18, 9],
           _hotels: [
             {
@@ -567,33 +438,18 @@ const seed = {
               _excursionId: 25,
               name: 'Iguazu Falls Day Trip',
               excursionImg: 'url',
-              description:
-                'Embark on an unforgettable journey to the awe-inspiring Iguazu Falls, exploring its magnificent waterfalls, lush rainforest surroundings, and diverse wildlife.',
-              duration: 720, // 12 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: [18]
             },
             {
               _excursionId: 26,
               name: 'Angra dos Reis Excursion',
               excursionImg: 'url',
-              description:
-                'Sail away to the paradise of Angra dos Reis on a full-day excursion, enjoying its pristine beaches, crystal-clear waters, and breathtaking island scenery.',
-              duration: 540, // 9 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: [9, 18]
             },
             {
               _excursionId: 27,
               name: 'Niteroi Tour',
               excursionImg: 'url',
-              description:
-                'Discover the beauty of Niteroi on a guided tour, visiting its landmarks, admiring panoramic views of Rio de Janeiro, and exploring its charming neighborhoods.',
-              duration: 360, // 6 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: []
             }
           ]
@@ -601,8 +457,7 @@ const seed = {
         {
           _cityId: 10,
           name: 'Sao Paulo',
-          cityImg:
-            'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713865049/bruno-thethe-nxkinK7hhOk-unsplash_jql8im.jpg',
+          cityImg: 'url',
           _users: [10, 13],
           _hotels: [
             {
@@ -629,33 +484,18 @@ const seed = {
               _excursionId: 28,
               name: 'Santos Beach Day Trip',
               excursionImg: 'url',
-              description:
-                'Escape to the sandy shores of Santos on a day trip, soaking up the sun, swimming in the refreshing waters, and enjoying beachside activities.',
-              duration: 360, // 6 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: [13]
             },
             {
               _excursionId: 29,
               name: 'Campinas Excursion',
               excursionImg: 'url',
-              description:
-                'Explore the vibrant city of Campinas on a guided excursion, discovering its cultural attractions, historic landmarks, and lively atmosphere.',
-              duration: 300, // 5 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: [10, 13]
             },
             {
               _excursionId: 30,
               name: 'Embú das Artes Tour',
               excursionImg: 'url',
-              description:
-                'Immerse yourself in the artsy atmosphere of Embú das Artes on a guided tour, browsing through its artisan shops, galleries, and street markets.',
-              duration: 240, // 4 hours
-              cancelation: true,
-              language: ['english', 'spanish', 'portuguese'],
               _users: [10, 13]
             }
           ]
