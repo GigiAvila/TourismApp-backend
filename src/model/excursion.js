@@ -9,6 +9,7 @@ const excursionSchema = new mongoose.Schema(
     description: { type: String, required: true },
     language: [{ type: String, required: true }],
     cancelation: { type: Boolean, required: true },
+    price: { type: Number, required: true },
     users: [
       { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: false }
     ]

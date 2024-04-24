@@ -61,7 +61,7 @@ const deleteExcursion = async (req, res, next) => {
 const updateExcursion = async (req, res, next) => {
   try {
     const { id } = req.params
-    const { name, users, description, duration, cancelation, language } =
+    const { name, users, description, duration, cancelation, language, price } =
       req.body
     const excursionImg = req.file ? req.file.path : undefined
 
@@ -72,7 +72,8 @@ const updateExcursion = async (req, res, next) => {
       description,
       duration,
       cancelation,
-      language
+      language,
+      price
     }
 
     const excursion = await updateExcursionByIdInDB(id, excursionUpdateData)

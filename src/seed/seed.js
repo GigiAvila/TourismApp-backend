@@ -39,6 +39,7 @@ const seed = {
           _excursions: [
             {
               _excursionId: 1,
+              price: 30,
               name: 'Toledo Day Trip',
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713950274/wei-hunag-Wsq7mTqt8nE-unsplash_rt6zmc.jpg',
@@ -51,6 +52,7 @@ const seed = {
             },
             {
               _excursionId: 2,
+              price: 20,
               name: 'Segovia Excursion',
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713950317/wei-hunag-3vH3ErzvH5s-unsplash_doqqad.jpg',
@@ -64,6 +66,7 @@ const seed = {
             {
               _excursionId: 3,
               name: 'Avila Tour',
+              price: 35,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713950352/dmitry-romanoff-NgszN8uHWpY-unsplash_dhq0rl.jpg',
               description:
@@ -105,6 +108,7 @@ const seed = {
             {
               _excursionId: 4,
               name: 'Montserrat Day Trip',
+              price: 50,
               description:
                 'Experience the beauty of Montserrat mountain and its Benedictine monastery on a day trip from Barcelona.',
               duration: 360, // 6 hours
@@ -117,6 +121,7 @@ const seed = {
             {
               _excursionId: 5,
               name: 'Costa Brava Excursion',
+              price: 80,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951095/ashwin-vaswani-Di0kRIb-giw-unsplash_wjjpcr.jpg',
               description:
@@ -129,6 +134,7 @@ const seed = {
             {
               _excursionId: 6,
               name: 'Tarragona Tour',
+              price: 60,
               description:
                 'Discover the ancient Roman ruins of Tarragona and its picturesque old town on a guided tour.',
               duration: 300, // 5 hours
@@ -182,6 +188,7 @@ const seed = {
             {
               _excursionId: 7,
               name: 'Versailles Palace Day Trip',
+              price: 90,
               description:
                 'Discover the grandeur of the Palace of Versailles and its magnificent gardens on a guided day trip from Paris.',
               duration: 360, // 6 hours
@@ -194,6 +201,7 @@ const seed = {
             {
               _excursionId: 8,
               name: 'Mont Saint-Michel Excursion',
+              price: 70,
               description:
                 'Journey to the mystical island of Mont Saint-Michel, marveling at its medieval abbey and breathtaking views.',
               duration: 420, // 7 hours
@@ -206,6 +214,7 @@ const seed = {
             {
               _excursionId: 9,
               name: 'Champagne Tour',
+              price: 80,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951109/dan-rooney-VJNVSWXaKkY-unsplash_xc3d63.jpg',
               description:
@@ -247,6 +256,7 @@ const seed = {
             {
               _excursionId: 10,
               name: 'Monaco Day Trip',
+              price: 50,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951180/roxana-crusemire-i7B3AASGeRk-unsplash_ycy8wc.jpg',
               description:
@@ -259,6 +269,7 @@ const seed = {
             {
               _excursionId: 11,
               name: 'Cannes Excursion',
+              price: 40,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951103/diane-picchiottino-YqKOBrpaON4-unsplash_pdewh3.jpg',
               description:
@@ -271,6 +282,7 @@ const seed = {
             {
               _excursionId: 12,
               name: 'Eze Tour',
+              price: 30,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951088/polina_hit-0Tg_wURCTls-unsplash_kvd3c1.jpg',
               description:
@@ -318,6 +330,7 @@ const seed = {
             {
               _excursionId: 13,
               name: 'Potsdam Day Trip',
+              price: 50,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951103/lobostudio-hamburg-emYo6xPIk5c-unsplash_t1kj12.jpg',
               description:
@@ -330,6 +343,7 @@ const seed = {
             {
               _excursionId: 14,
               name: 'Dresden Excursion',
+              price: 70,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951119/olgi-h2SdEqZIYUc-unsplash_nz6a6n.jpg',
               description:
@@ -342,6 +356,7 @@ const seed = {
             {
               _excursionId: 15,
               name: 'Leipzig Tour',
+              price: 30,
               description:
                 'Experience the vibrant cultural scene of Leipzig on a guided tour, exploring its music venues, historic squares, and bustling markets.',
               duration: 300, // 5 hours
@@ -383,6 +398,7 @@ const seed = {
             {
               _excursionId: 16,
               name: 'Neuschwanstein Castle Day Trip',
+              price: 90,
               description:
                 'Embark on a fairytale journey with a day trip to Neuschwanstein Castle, exploring its majestic architecture, scenic surroundings, and enchanting tales.',
               duration: 540, // 9 hours
@@ -395,6 +411,7 @@ const seed = {
             {
               _excursionId: 17,
               name: 'Salzburg Excursion',
+              price: 80,
               description:
                 "Discover the musical heritage and charming streets of Salzburg on a day excursion, visiting Mozart's birthplace, wandering through gardens, and enjoying alpine views.",
               duration: 420, // 7 hours
@@ -407,6 +424,7 @@ const seed = {
             {
               _excursionId: 18,
               name: 'Nuremberg Tour',
+              price: 80,
               description:
                 'Explore the medieval streets and rich history of Nuremberg on a guided tour, visiting its castle, museums, and famous Christmas market.',
               duration: 360, // 6 hours
@@ -454,6 +472,7 @@ const seed = {
             {
               _excursionId: 19,
               name: 'Sintra Day Trip',
+              price: 60,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951087/katia-de-juan-ZQjujHKWcak-unsplash_qo46iy.jpg',
               description:
@@ -466,6 +485,7 @@ const seed = {
             {
               _excursionId: 20,
               name: 'Cascais Excursion',
+              price: 50,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951101/jeroen-den-otter-xwiejaD799Y-unsplash_gonk4z.jpg',
               description:
@@ -478,6 +498,7 @@ const seed = {
             {
               _excursionId: 21,
               name: 'Fátima Tour',
+              price: 30,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951087/santiago-ospina-hLaaWqAmuK0-unsplash_djtucy.jpg',
               description:
@@ -519,6 +540,7 @@ const seed = {
             {
               _excursionId: 22,
               name: 'Douro Valley Day Trip',
+              price: 80,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951101/jw-BpTz_kICS2E-unsplash_xjuvsr.jpg',
               description:
@@ -531,6 +553,7 @@ const seed = {
             {
               _excursionId: 23,
               name: 'Guimaraes Excursion',
+              price: 70,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951183/miriam-pereira-eGfhfg24K2s-unsplash_oomo1x.jpg',
               description:
@@ -543,6 +566,7 @@ const seed = {
             {
               _excursionId: 24,
               name: 'Aveiro Tour',
+              price: 50,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951097/ricardo-resende-KDhIe2W3C-Y-unsplash_tpsr2g.jpg',
               description:
@@ -590,6 +614,7 @@ const seed = {
             {
               _excursionId: 25,
               name: 'Iguazu Falls Day Trip',
+              price: 80,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951087/derek-oyen-lYv3hXpFdeY-unsplash_esdcwn.jpg',
               description:
@@ -602,6 +627,7 @@ const seed = {
             {
               _excursionId: 26,
               name: 'Angra dos Reis Excursion',
+              price: 70,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951094/linoleum-creative-collective-wkGGpBiKKas-unsplash_si1ze7.jpg',
               description:
@@ -614,6 +640,7 @@ const seed = {
             {
               _excursionId: 27,
               name: 'Niteroi Tour',
+              price: 40,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951094/maarten-van-den-heuvel-Siuwr3uCir0-unsplash_gpvy9y.jpg',
               description:
@@ -655,6 +682,7 @@ const seed = {
             {
               _excursionId: 28,
               name: 'Santos Beach Day Trip',
+              price: '40',
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951088/washington-oliveira-fSr3SgmC57U-unsplash_ztvrxn.jpg',
               description:
@@ -667,6 +695,7 @@ const seed = {
             {
               _excursionId: 29,
               name: 'Campinas Excursion',
+              price: '40',
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713952559/feliphe-schiarolli-Ecf-AYLNm4o-unsplash_c1gnnw.jpg',
               description:
@@ -679,6 +708,7 @@ const seed = {
             {
               _excursionId: 30,
               name: 'Embú das Artes Tour',
+              price: 25,
               excursionImg:
                 'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713951093/amanda-lins-eVrwy8vpp50-unsplash_s7ywd4.jpg',
               description:
