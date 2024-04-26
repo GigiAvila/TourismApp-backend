@@ -7,6 +7,8 @@ const seed = {
         {
           _cityId: 1,
           name: 'Madrid',
+          description:
+            "Madrid is the vibrant capital of Spain, known for its rich history, art, and culture. It's famous for its lively nightlife, beautiful architecture, and world-class museums like the Prado and Reina Sofía",
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713861188/florian-wehde-WBGjg0DsO_g-unsplash_fvvarg.jpg',
           _users: [1, 16],
@@ -81,6 +83,8 @@ const seed = {
         {
           _cityId: 2,
           name: 'Barcelona',
+          description:
+            "Barcelona is a cosmopolitan city located on the northeastern coast of Spain. It's renowned for its stunning architecture, including the iconic Sagrada Família and Park Güell, as well as its bustling street life, sandy beaches, and delicious cuisine.",
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864303/logan-armstrong-hVhfqhDYciU-unsplash_rzxn3w.jpg',
           _users: [2, 14],
@@ -155,6 +159,8 @@ const seed = {
         {
           _cityId: 3,
           name: 'Paris',
+          description:
+            "Paris, the capital of France, is synonymous with romance, fashion, and culture. It's home to iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral, as well as charming cafes, stylish boutiques, and picturesque streets.",
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864369/chris-karidis-nnzkZNYWHaU-unsplash_ctkbpv.jpg',
           _users: [15, 3],
@@ -229,6 +235,8 @@ const seed = {
         {
           _cityId: 4,
           name: 'Nice',
+          description:
+            'Nice is a picturesque city nestled on the French Riviera, known for its stunning coastline, vibrant markets, and Mediterranean charm. Visitors can explore its historic Old Town, stroll along the Promenade des Anglais, or relax on the pebbly beaches.',
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864444/paul-teysen-ymOyn55Ztyk-unsplash_io8bxg.jpg',
           _users: [4],
@@ -303,6 +311,8 @@ const seed = {
         {
           _cityId: 5,
           name: 'Berlin',
+          description:
+            "Berlin is the dynamic capital of Germany, celebrated for its edgy art scene, historic landmarks, and vibrant nightlife. It's a city of contrasts, where modern architecture meets traces of its tumultuous past, including the Berlin Wall and Checkpoint Charlie.",
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864486/florian-wehde-1uWanmgkd5g-unsplash_mwmwfv.jpg',
           _users: [17, 5],
@@ -371,6 +381,8 @@ const seed = {
         {
           _cityId: 6,
           name: 'Munich',
+          description:
+            'Munich is a charming city in southern Germany, famous for its beer gardens, traditional Bavarian architecture, and cultural heritage. Visitors can explore landmarks like Marienplatz, Nymphenburg Palace, and the bustling Viktualienmarkt',
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864531/ian-kelsall-MEUvVqkU3QI-unsplash_wzjd7l.jpg',
           _users: [6, 11],
@@ -445,6 +457,8 @@ const seed = {
         {
           _cityId: 7,
           name: 'Lisbon',
+          description:
+            "Lisbon is the capital city of Portugal, perched on the edge of the Atlantic Ocean. It's known for its colorful tiled buildings, historic neighborhoods, and panoramic views from viewpoints like Miradouro da Senhora do Monte.",
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864590/aayush-gupta-ljhCEaHYWJ8-unsplash_l0w9ig.jpg',
           _users: [7],
@@ -513,6 +527,8 @@ const seed = {
         {
           _cityId: 8,
           name: 'Porto',
+          description:
+            'Porto is a picturesque city in Portugal known for its historic center, charming riverside district, and world-renowned port wine. Visitors can wander through narrow streets, admire ornate churches, and cross the iconic Dom Luís I Bridge.',
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864645/daniel-sessler-YVj9hyQgtkY-unsplash_pdz1vu.jpg',
           _users: [12, 8],
@@ -587,6 +603,8 @@ const seed = {
         {
           _cityId: 9,
           name: 'Rio de Janeiro',
+          description:
+            'Rio de Janeiro is a vibrant coastal city in Brazil, famed for its stunning beaches, lush mountains, and Carnival celebrations. Iconic landmarks include the Christ the Redeemer statue, Sugarloaf Mountain, and Copacabana Beach',
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713864980/agustin-diaz-gargiulo-7F65HDP0-E0-unsplash_psloyq.jpg',
           _users: [18, 9],
@@ -655,6 +673,8 @@ const seed = {
         {
           _cityId: 10,
           name: 'Sao Paulo',
+          description:
+            "São Paulo is a bustling metropolis in Brazil, known for its cultural diversity, thriving food scene, and impressive skyline. It's a cosmopolitan city with world-class museums, vibrant neighborhoods, and an energetic atmosphere.",
           cityImg:
             'https://res.cloudinary.com/dqdyvyknw/image/upload/v1713865049/bruno-thethe-nxkinK7hhOk-unsplash_jql8im.jpg',
           _users: [10, 13],

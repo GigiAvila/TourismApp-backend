@@ -35,6 +35,7 @@ const createCity = async (req, res, next) => {
       users: req.body.users,
       hotels: req.body.hotels,
       excursions: req.body.excursions,
+      description: req.body.description,
       cityImg: req.file.path
     })
     res.status(201).json({ data: newCity })
@@ -59,13 +60,14 @@ const deleteCity = async (req, res, next) => {
 const updateCity = async (req, res, next) => {
   try {
     const { id } = req.params
-    const { name, users } = req.body
+    const { name, users, description } = req.body
     const cityImg = req.file ? req.file.path : undefined
 
     const cityUpdateData = {
       name,
       users,
-      cityImg
+      cityImg,
+      description
     }
 
     const city = await updateCityByIdInDB(id, cityUpdateData)

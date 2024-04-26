@@ -5,6 +5,7 @@ const citySchema = new mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
     cityImg: { type: String, required: false, trim: true },
+    description: { type: String, required: true, trim: true },
     users: [
       { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: false }
     ],
